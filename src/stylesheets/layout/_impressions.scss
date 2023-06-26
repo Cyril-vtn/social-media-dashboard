@@ -1,0 +1,54 @@
+.today {
+  margin-top: pxToRem(46px);
+}
+
+.impressions {
+  display: grid;
+  gap: 1rem;
+  margin-top: pxToRem(27px);
+  padding-bottom: pxToRem(45px);
+}
+
+.impressions__fig {
+  display: grid;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-template-columns: auto auto;
+  place-items: center;
+
+  height: 125px;
+  padding: 1.5rem;
+  background-color: var(--theme-impressions-bg);
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.impressions__fig:hover {
+  background-color: var(--theme-impressions-hover);
+}
+.impressions__delta {
+  color: $clr-accent-green;
+}
+.impressions__delta.impressions--negative {
+  color: $clr-accent-red;
+}
+.impressions__delta::before {
+  content: url("/assets/icon-up.svg");
+  width: 8px;
+  margin-right: 0.3rem;
+}
+.impressions__delta.impressions--negative::before {
+  content: url("/assets/icon-down.svg");
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .impressions {
+    gap: pxToRem(30px);
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, auto);
+    padding-bottom: pxToRem(75px);
+  }
+}

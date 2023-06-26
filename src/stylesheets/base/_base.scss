@@ -1,0 +1,44 @@
+/*****************************************************************************
+ * base
+ *
+ *  Foundational initialization of core elements.
+ *
+ *****************************************************************************/
+
+:root {
+  // indicate to browser that both schemes are supported by the page
+  color-scheme: dark light;
+}
+/**
+ * body
+ */
+body {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.9375rem;
+  line-height: 1.667;
+  letter-spacing: -0.23px;
+  color: var(--theme-text-regular);
+  background-color: var(--theme-bg);
+  transition: 0.4s ease-in-out;
+}
+
+/**
+ * img
+ */
+img {
+  width: 100%;
+}
+
+/**
+ * ul
+ */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+}
